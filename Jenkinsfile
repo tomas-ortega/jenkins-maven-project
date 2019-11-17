@@ -1,6 +1,8 @@
-pipeline {
-    agent {
-        master
+pipeline {  
+    agent { 
+        node { 
+                label 'master' 
+             } 
     }
 
     options {
