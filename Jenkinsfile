@@ -1,5 +1,7 @@
 pipeline {
-    agent master
+    agent {
+        master
+    }
 
     options {
         timestamps()
