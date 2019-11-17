@@ -18,19 +18,19 @@ pipeline {
 
         stage('Build Project') {
             steps {
-                sh 'mvn build'
+                sh 'mvn build ./jenkins-maven-project'
             }
         }
 
         stage('Unit Testing') {
             steps {
-                sh 'mvn test'
+                sh 'mvn test ./jenkins-maven-project'
             }
         }
 
         stage('Package') {
             steps {
-                sh 'mvn package'
+                sh 'mvn package ./jenkins-maven-project'
             }
         }
     }
