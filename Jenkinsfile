@@ -15,6 +15,12 @@ pipeline {
                 cleanWs()
             }
         }
+        
+        stage('Prepare Environment') {
+            steps {
+                git branch: '$BRANCH_NAME', url: 'https://github.com/tomas-ortega/jenkins-maven-project.git'
+            }
+        }
 
         stage('Compile Project') {
             steps {
