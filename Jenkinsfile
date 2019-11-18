@@ -16,9 +16,9 @@ pipeline {
             }
         }
 
-        stage('Build Project') {
+        stage('Compile Project') {
             steps {
-                sh 'mvn build -f jenkins-maven-project/pom.xml'
+                sh 'mvn compile -f jenkins-maven-project/pom.xml'
             }
         }
 
